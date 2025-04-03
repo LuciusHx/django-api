@@ -39,7 +39,6 @@ def edit_place(request, place_name):
     
     serializer = PlacesSerializer(place_updated, data=request.data, partial=True)
     if serializer.is_valid():
-        print('chegou ok')
         serializer.save()
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
     return Response(status=status.HTTP_400_BAD_REQUEST)

@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'api_root.urls'
@@ -130,9 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# CORS_ORIGINS_ALLOW_ALL = True
-
-CORS_ALLOW_ORIGINS = [
-    'http://localhost:8000',
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_ORIGINS = [
+#     'http://localhost:8100',
+# ]
